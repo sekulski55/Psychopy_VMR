@@ -221,95 +221,6 @@
         <Param name="vertices" updates="constant" val="" valType="list"/>
       </PolygonComponent>
     </Routine>
-    <Routine name="Move_Home">
-      <MouseComponent name="mouse">
-        <Param name="clickable" updates="constant" val="" valType="list"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutineOnPress" updates="constant" val="any click" valType="str"/>
-        <Param name="name" updates="None" val="mouse" valType="code"/>
-        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="every frame" valType="str"/>
-        <Param name="saveParamsClickable" updates="constant" val="name," valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
-        <Param name="timeRelativeTo" updates="constant" val="routine" valType="str"/>
-      </MouseComponent>
-      <PolygonComponent name="Cursor">
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="white" valType="color"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="white" valType="color"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="num"/>
-        <Param name="nVertices" updates="constant" val="180" valType="int"/>
-        <Param name="name" updates="None" val="Cursor" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="set every frame" val="(mouse.getPos()[0], mouse.getPos()[1])" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="None" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.025, 0.025)" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="vertices" updates="constant" val="" valType="list"/>
-      </PolygonComponent>
-      <PolygonComponent name="Home">
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="white" valType="color"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="white" valType="color"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="num"/>
-        <Param name="nVertices" updates="constant" val="180" valType="int"/>
-        <Param name="name" updates="None" val="Home" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="None" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.05, 0.05)" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="vertices" updates="constant" val="180" valType="list"/>
-      </PolygonComponent>
-      <CodeComponent name="code">
-        <Param name="Before Experiment" updates="constant" val="import random&amp;#10;#[Tx,Ty] = (tgt_distance, tgt_angle)" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="#win.mouseVisible = False&amp;#10;mouse.setVisible(False)&amp;#10;#Start_angle = random.choice([0, 45, 180]) &amp;#10;#[Tx,Ty] = pol2cart(.354, 0)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="mouse.setVisible(false);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="mouse.setVisible(false);&amp;#10;wait_time = 0;&amp;#10;cur_trial = (cur_trial + 1);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="mouse.setVisible(False)&amp;#10;wait_time = 0;&amp;#10;cur_trial=cur_trial+1&amp;#10;#[Tx,Ty] = pol2cart(tgt_distance,tgt_angle)" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="#Dist_from_Home = sqrt((Cursor.pos[0]-Home.pos[0])**2)&amp;#10;Dist_from_Home = sqrt(((Cursor.pos[0]-Home.pos[0])**2)+(Cursor.pos[1]-Home.pos[1])**2)&amp;#10;&amp;#10;&amp;#10;&amp;#10;if Dist_from_Home &gt; 0.20:&amp;#10;    continueRoutine = True;&amp;#10;    Cursor.opacity =0&amp;#10;if (Dist_from_Home &lt;= 0.20) &amp; (Dist_from_Home &gt; 0.0125):&amp;#10;    continueRoutine = True;&amp;#10;    Cursor.opacity =1&amp;#10;if Dist_from_Home &lt; 0.0125:&amp;#10;    wait_time = wait_time+1&amp;#10;if wait_time &gt; 10: &amp;#10;    print(&quot;hello&quot;)&amp;#10;    continueRoutine = False;&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="Dist_from_Home = Math.sqrt((Math.pow((Cursor.pos[0] - Home.pos[0]), 2) + Math.pow((Cursor.pos[1] - Home.pos[1]), 2)));&amp;#10;if ((Dist_from_Home &gt; 0.2)) {&amp;#10;    continueRoutine = true;&amp;#10;    Cursor.opacity = 0;&amp;#10;}&amp;#10;if (((Dist_from_Home &lt;= 0.2) &amp; (Dist_from_Home &gt; 0.0125))) {&amp;#10;    continueRoutine = true;&amp;#10;    Cursor.opacity = 1;&amp;#10;}&amp;#10;if ((Dist_from_Home &lt; 0.0125)) {&amp;#10;    wait_time = (wait_time + 1);&amp;#10;}&amp;#10;if ((wait_time &gt; 10)) {&amp;#10;    console.log(&quot;hello&quot;);&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="&amp;#10;" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code" valType="code"/>
-      </CodeComponent>
-    </Routine>
     <Routine name="Instr">
       <TextComponent name="Instruct_text">
         <Param name="color" updates="constant" val="white" valType="color"/>
@@ -612,70 +523,6 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="Instr_end">
-      <TextComponent name="Instruct_text_4">
-        <Param name="color" updates="constant" val="white" valType="color"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="None" valType="str"/>
-        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
-        <Param name="name" updates="None" val="Instruct_text_4" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The End, Thank you!&amp;#10;&amp;#10;Press space to continue" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
-      </TextComponent>
-      <KeyboardComponent name="key_resp_4">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_4" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-    </Routine>
-    <Routine name="CodeStartup">
-      <CodeComponent name="code_2">
-        <Param name="Before Experiment" updates="constant" val="import random, xlrd&amp;#10;&amp;#10;#input file&amp;#10;in_file = 'Target_file_real.xlsx'&amp;#10;&amp;#10;#trials to load&amp;#10;numtrials = 128" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;import * as xlrd from 'xlrd';&amp;#10;var in_file, numtrials;&amp;#10;in_file = &quot;Target_file_real.xlsx&quot;;&amp;#10;numtrials = 128;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="#open the excel file&amp;#10;inbook = xlrd.open_workbook(in_file)&amp;#10;insheet = inbook.sheet_by_index(0)&amp;#10;&amp;#10;#array to hold columns&amp;#10;trialnum = []&amp;#10;tgt_distance = []&amp;#10;tgt_angle = []&amp;#10;rotation = []&amp;#10;#Loop through rows of tgt file&amp;#10;for rowx in range(1,numtrials+1):&amp;#10;    #read row&amp;#10;    row = insheet.row_values(rowx)&amp;#10;    trialnum.append(row[0])&amp;#10;    tgt_distance.append(row[1])&amp;#10;    tgt_angle.append(row[2])&amp;#10;    rotation.append(row[3])&amp;#10;&amp;#10;cur_trial = 0&amp;#10;cur_distance = 0&amp;#10;cur_angle = 0&amp;#10;cur_rotation = 0&amp;#10;&amp;#10;#import math&amp;#10;#start_angle = math.radians(225)&amp;#10;#[Tx,Ty] = pol2cart(tgt_distance[cur_angle], start_angle)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="inbook = xlrd.open_workbook(in_file);&amp;#10;insheet = inbook.sheet_by_index(0);&amp;#10;trialnum = [];&amp;#10;tgt_distance = [];&amp;#10;tgt_angle = [];&amp;#10;rotation = [];&amp;#10;for (var rowx, _pj_c = 0, _pj_a = util.range(1, (numtrials + 1)), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    rowx = _pj_a[_pj_c];&amp;#10;    row = insheet.row_values(rowx);&amp;#10;    trialnum.push(row[0]);&amp;#10;    tgt_distance.push(row[1]);&amp;#10;    tgt_angle.push(row[2]);&amp;#10;    rotation.push(row[3]);&amp;#10;}&amp;#10;cur_trial = 0;&amp;#10;cur_distance = 0;&amp;#10;cur_angle = 0;&amp;#10;cur_rotation = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_2" valType="code"/>
-      </CodeComponent>
-    </Routine>
     <Routine name="End">
       <TextComponent name="text">
         <Param name="color" updates="constant" val="white" valType="color"/>
@@ -722,7 +569,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="code_starter">
-      <CodeComponent name="code_3">
+      <CodeComponent name="code_startup">
         <Param name="Before Experiment" updates="constant" val="#IMPORTANT!!!&amp;#10;#This section is CODE type: BOTH meaning that it doesnt &amp;#10;#instantly convert to JS&amp;#10;#This is because these functions do not convert the right way&amp;#10;#and need to be manually inputted&amp;#10;#*BE careful when touching these functions*&amp;#10;&amp;#10;&amp;#10;#TO run the code through entire target file:&amp;#10;#set 1st REACH trials to &quot;1:16&quot;&amp;#10;#set Reach_VMR trials to &quot;17:96&quot;&amp;#10;#set 2dn REACH trials to &quot;97:105&quot;&amp;#10;#set 3rd REACH trials to &quot;106:128&quot;&amp;#10;&amp;#10;def cart2pol(x, y):&amp;#10;    '''&amp;#10;    Converts cartesian coordinates to polar coordinates&amp;#10;&amp;#10;    Parameters:&amp;#10;    x - x coord &amp;#10;    y - y coord &amp;#10;&amp;#10;    Returns:&amp;#10;    rho (distance), phi(angle)&amp;#10;    '''&amp;#10;    rho = sqrt(x**2 + y**2)&amp;#10;    phi = np.arctan2(y, x) #becomes Math.atan2(y,x) on JS side&amp;#10;    return(rho, phi)&amp;#10;    &amp;#10;def JustPhi(x,y):&amp;#10;    '''&amp;#10;    Finds just the phi component from cartesian coords&amp;#10;    Parameters:&amp;#10;    x - x coord &amp;#10;    y - y coord &amp;#10;&amp;#10;    Returns:&amp;#10;    phi(angle)&amp;#10;    '''&amp;#10;    phi = np.arctan2(y, x)&amp;#10;    return(phi)&amp;#10;    &amp;#10;" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="function cart2pol(x, y) {&amp;#10;    var phi, rho;&amp;#10;    rho = Math.sqrt((Math.pow(x, 2) + Math.pow(y, 2)));&amp;#10;    phi = Math.atan2(y, x);&amp;#10;    return [rho, phi];&amp;#10;}&amp;#10;&amp;#10;function JustPhi(x, y) {&amp;#10;    var phi;&amp;#10;    phi = Math.atan2(y, x);&amp;#10;    return [phi];&amp;#10;}" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="#document.documentElement.style.cursor = 'none';&amp;#10;" valType="extendedCode"/>
@@ -737,7 +584,7 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_3" valType="code"/>
+        <Param name="name" updates="None" val="code_startup" valType="code"/>
       </CodeComponent>
     </Routine>
     <Routine name="Instr_wash_fb">
@@ -784,34 +631,6 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-    </Routine>
-    <Routine name="new">
-      <PolygonComponent name="polygon_2">
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1" valType="num"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="white" valType="color"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="white" valType="color"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="num"/>
-        <Param name="nVertices" updates="constant" val="180" valType="int"/>
-        <Param name="name" updates="None" val="polygon_2" valType="code"/>
-        <Param name="opacity" updates="constant" val="" valType="num"/>
-        <Param name="ori" updates="constant" val="0" valType="num"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="None" val="circle" valType="str"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="list"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="vertices" updates="constant" val="" valType="list"/>
-      </PolygonComponent>
     </Routine>
   </Routines>
   <Flow>
